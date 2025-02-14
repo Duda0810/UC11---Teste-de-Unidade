@@ -1,0 +1,40 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.*;
+
+public class calculadoracTest {
+    @Test
+    public void soma() {
+        calculadorac calculadora = new calculadorac();
+        int resultado = 350;
+        int soma = (int) calculadorac.soma(100, 250);
+        Assertions.assertEquals(resultado, soma);
+        assertTrue("a soma nao e positiva", resultado>0)
+        ;
+        assertNotEquals(10.0, calculadorac.soma(5.0, 3.0));
+        assertNotNull(calculadorac.soma(5.0, 3.0));
+    }
+    @Test
+    public void subtracao(){
+        calculadorac calculadora = new calculadorac();
+        int resultadoesperado = 10;
+        int subtracao = (int) calculadorac.subtracao(20, 10);
+        Assertions.assertEquals(resultadoesperado, subtracao);
+    }
+    @Test
+    public void multiplicacao(){
+        calculadorac calculadora = new calculadorac();
+        int resultadoesperado =  16;
+        int multiplicacao = (int) calculadorac.multiplicacao(4, 4);
+        Assertions.assertEquals(resultadoesperado, multiplicacao);
+    }
+    @Test
+    public void divisao(){
+        calculadorac calculadora = new calculadorac();
+        int  resultadoesperado = 100;
+        int divisao = (int) calculadorac.divisao(1000, 10);
+        Assertions.assertEquals(resultadoesperado, divisao);
+    }
+}
