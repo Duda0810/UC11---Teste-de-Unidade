@@ -1,0 +1,18 @@
+public class RelacaoAluno {
+
+    public static String calcularDescanso(Aluno Aluno) {
+
+        if (Aluno.getCansaco() <= 20) {
+            return "Descanso diario suficiente: 0 aluno esta tranquilosem estresse!";
+
+        } else if (Aluno.getCansaco() <= 50) {
+            return "Descanso nos fins de semana  suficiente: o aluno esta moderadamente cansado.";
+        }else if (Aluno.getCansaco() <= 80){
+            return "Ferias sao necessarias! o aluno esta exausto.";
+
+        }else {
+            return "O aluno esta completamente exausto!";
+        }
+    }
+}
+
