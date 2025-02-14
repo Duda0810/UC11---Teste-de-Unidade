@@ -1,0 +1,22 @@
+public class calculadorac {
+
+    public static double soma(double a, double b) {
+        return a + b;
+    }
+
+    public static double subtracao(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiplicacao(double a, double b) {
+        return a * b;
+    }
+
+    public static double divisao(double a, double b) {
+        // Verifica se o divisor é zero para evitar divisão por zero
+        if (b == 0) {
+            throw new IllegalArgumentException("Não é possível dividir por zero!");
+        }
+        return a / b;
+    }
+}
