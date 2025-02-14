@@ -1,0 +1,36 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class RelacaoAlunoTest {
+    private Aluno aluno1, aluno2, aluno3, aluno4;
+    @BeforeEach
+    public void setup(){
+        System.out.printf("Criando novos alunos: :)...");
+        aluno1 = new Aluno("Neymar", 80.0);
+        aluno2 = new Aluno("Arthur", 10.0);
+        aluno3 = new Aluno("Ariel", 40.0);
+        aluno4 = new Aluno("Maria", 90.0);
+    }
+    @Test
+    public void testDescansoSuficiente(){
+        System.out.printf("Testando descanso suficiente...");
+        String descanso = RelacaoAluno.calcularDescanso(aluno1);
+        assertEquals("Feria sao necessarias! o aluno esta exausto.", descanso,
+                "Esperado descanso de feria é suficiente");
+    }
+    @Test
+    public void testDescansosuficiente(){
+        System.out.printf("Testando descanso suficiente...");
+        String descanso = RelacaoAluno.calcularDescanso(aluno2);
+        assertEquals("Descanso diario suficiente: 0 aluno esta tranquilosem estresse!", descanso,
+                "Esperado descanso diario é suficiente.");
+    }
+    @Test
+    public void testDescansosuficiente(){
+        System.out.printf("Testando descanso suficiente...");
+        String descanso = RelacaoAluno.calcularDescanso(aluno3);
+        assertEquals("Descanso nos fins de semana  suficiente: o aluno esta moderadamente cansado.", descanso,
+                "Esperado descanso nos fins de semana é suficiente.");
+}
